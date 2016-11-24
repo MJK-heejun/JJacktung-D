@@ -10,11 +10,16 @@ public class CollideCheck : MonoBehaviour {
         player = gameObject.GetComponentInParent<Player>();
     }
 
-
     void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "enemy" && !player.isInvincible)
-            player.curHealth--;
+        if(col.gameObject.tag == "enemy")
+        {
+            if (!player.isInvincible)
+                player.curHealth--;
+            else
+                player.currentPoint += 1000;
+        }
+            
     }
 
     //gets called when the trigger stays in something???

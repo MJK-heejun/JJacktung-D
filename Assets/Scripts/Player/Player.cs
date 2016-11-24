@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
     public int curHealth;
 
     public bool isInvincible = false;
-
+    public int currentPoint = 0;
 
 
     // Use this for initialization
@@ -54,6 +54,7 @@ public class Player : MonoBehaviour {
                 Mathf.Clamp(rb2d.position.x, boundary.xMin, boundary.xMax),
                 Mathf.Clamp(rb2d.position.y, boundary.yMin, boundary.yMax));
         }
+        currentPoint++;
     }
 
     public void ActivateShield() {

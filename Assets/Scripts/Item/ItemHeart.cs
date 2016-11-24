@@ -32,6 +32,8 @@ public class ItemHeart : MonoBehaviour {
             int currentHealth = player.curHealth;
             if (currentHealth < 5)
                 player.curHealth++;
+            else
+                player.currentPoint += 1000;
             Destroy(this.gameObject);
         }
     }

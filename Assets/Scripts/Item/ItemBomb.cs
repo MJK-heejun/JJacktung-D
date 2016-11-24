@@ -30,6 +30,8 @@ public class ItemBomb : MonoBehaviour {
             {
                 obj.GetComponent<Enemy>().Explode();
             }
+            Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            player.currentPoint += 2000;
             Destroy(this.gameObject);
         }
     }
